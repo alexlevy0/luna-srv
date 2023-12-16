@@ -10,9 +10,10 @@ def main():
     )
 
     # command = f"python run.py -s '{image_filename}' -t '{video_filename}' -o '{output_filename}' --keep-fps --output-video-quality 10"
-    command = "python run.py -h"
+    process = subprocess.Popen(command, shell=True)
 
-    process = subprocess.Popen(command)
+    # Attendre la fin de l'exécution de la commande
+    process.wait()
 
 
 if __name__ == "__main__":
