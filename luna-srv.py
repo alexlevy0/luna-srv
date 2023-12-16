@@ -1,6 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse, parse_qs
-import subprocess
 
 
 class RequestHandler(BaseHTTPRequestHandler):
@@ -21,21 +20,21 @@ class RequestHandler(BaseHTTPRequestHandler):
         video_filename = video_url.split("/")[-1].split(".")[0]
 
         output_filename = f"{video_filename}-{image_filename}.mp4"
-        print(output_filename)
+        # print(output_filename)
 
         # command = f"python run.py -s '{image_url}' -t '{video_url}' -o '{output_filename}' --keep-fps --output-video-quality 10"
-        command = "python run.py -h"
+        # command = "python run.py -h"
 
-        process = subprocess.Popen(
-            command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
-        )
-        output, error = process.communicate()
-        print(output)
-        print(error)
+        # process = subprocess.Popen(
+        #     command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        # )
+        # output, error = process.communicate()
+        # print(output)
+        # print(error)
 
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(output)
+        self.wfile.write(output_filename.encode())
 
 
 def run(server_class=HTTPServer, handler_class=RequestHandler, port=80):
