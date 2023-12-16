@@ -1,3 +1,6 @@
+import subprocess
+
+
 def main():
     video_filename = "video.mp4"
     image_filename = "moi.jpg"
@@ -20,7 +23,7 @@ def main():
     # output, error = process.communicate()
     # print(f"luna-srv.py output : {output}")
 
-    res = subprocess.check_output('ls', shell=True, text=True)
+    res = subprocess.check_output("ls", shell=True, text=True)
     print(res)
 
     # result = subprocess.run(["echo", "hello", "world"], capture_output=True, text=True)
