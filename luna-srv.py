@@ -19,7 +19,11 @@ def main():
     # )
     # output, error = process.communicate()
     # print(f"luna-srv.py output : {output}")
-    subprocess.run(command, capture_output=True, text=True).stdout
+    result = subprocess.run(["echo", "hello", "world"], capture_output=True, text=True)
+
+    print(repr(result.stdout))
+
+    # subprocess.run(command, capture_output=True, text=True).stdout
     # print(f"luna-srv.py output : {output_filename}")
 
     # process.wait()
