@@ -1,6 +1,3 @@
-import time
-
-
 def main():
     video_filename = "video.mp4"
     image_filename = "moi.jpg"
@@ -8,6 +5,9 @@ def main():
     output_filename = (
         f"{video_filename.split('.')[0]}-{image_filename.split('.')[0]}.mp4"
     )
+
+    command = "python run.py -h"
+    print(f"luna-srv.py cmd : {command}")
 
     # command = f"python run.py -s '{image_filename}' -t '{video_filename}' -o '{output_filename}' --keep-fps --output-video-quality 10"
     process = subprocess.Popen(command, shell=True)
