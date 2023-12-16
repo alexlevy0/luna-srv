@@ -6,7 +6,8 @@ def main():
         f"{video_filename.split('.')[0]}-{image_filename.split('.')[0]}.mp4"
     )
 
-    command = "python run.py -h"
+    # command = "python run.py -h"
+    command = "python -v"
     # print(f"luna-srv.py cmd : {command}")
 
     # command = f"python run.py -s '{image_filename}' -t '{video_filename}' -o '{output_filename}' --keep-fps --output-video-quality 10"
