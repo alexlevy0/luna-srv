@@ -3,7 +3,9 @@ import time
 
 def main():
     for i in range(10):
+        print("<pre>")
         print(f"Ligne {i}: contenu de test")
+        print("</pre>")
         time.sleep(1)  # Attendre 1 seconde entre chaque ligne
 
 
