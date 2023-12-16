@@ -35,7 +35,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(output.encode())
+        self.wfile.write(output)
 
 
 def run(server_class=HTTPServer, handler_class=RequestHandler, port=80):
