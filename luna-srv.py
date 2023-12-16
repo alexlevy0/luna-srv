@@ -13,14 +13,16 @@ def main():
     # command = f"python run.py -s '{image_filename}' -t '{video_filename}' -o '{output_filename}' --keep-fps --output-video-quality 10"
     # process = subprocess.Popen(command)
     # process = subprocess.Popen(command, shell=True)
-    process = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
-    )
-    output, error = process.communicate()
-    print(f"luna-srv.py output : {output}")
 
-    # Attendre la fin de l'exécution de la commande
-    process.wait()
+    # process = subprocess.Popen(
+    #     command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+    # )
+    # output, error = process.communicate()
+    # print(f"luna-srv.py output : {output}")
+
+    print(f"luna-srv.py output : {output_filename}")
+
+    # process.wait()
 
 
 if __name__ == "__main__":
