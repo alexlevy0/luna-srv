@@ -20,7 +20,8 @@ def main():
     # output, error = process.communicate()
     # print(f"luna-srv.py output : {output}")
 
-    subprocess.check_output('ls', shell=True, text=True)
+    res = subprocess.check_output('ls', shell=True, text=True)
+    print(res)
 
     # result = subprocess.run(["echo", "hello", "world"], capture_output=True, text=True)
     # print(repr(result.stdout))
